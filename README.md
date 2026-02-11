@@ -1,5 +1,5 @@
 <p align="center">
-  ![](./assets/moses.png)
+<img src="./assets/moses.png" />
 </p>
 
 <p align="center">
@@ -8,13 +8,11 @@
   <img src="https://img.shields.io/badge/AI_Engine-ONNX_Runtime-orange?style=for-the-badge" alt="AI">
 </p>
 
-*基于在线学习算法的全资产量化交易信号聚合 ensemble 框架*
-
 ---
 
 ## 摘要
 
-Moses 是一个专为高度非平稳金融市场设计的混合智能交易聚合框架。本项目融合了 Multiplicative Weights Update 的在线学习理论、GAF 的计算机视觉特征提取，以及 PPO 的深度强化学习控制方法。Moses 通过将信号映射至标准度量空间，利用遗憾界约束动态优化权重分配，实现了跨资产类别（股票、期货、期权等）的自适应风险对冲与策略集成。
+Moses 是一个基于在线学习算法的全资产量化交易信号聚合 ensemble 框架。本项目融合了 Multiplicative Weights Update 的在线学习理论、GAF 的计算机视觉特征提取，以及 PPO 的深度强化学习控制方法。Moses 通过将信号映射至标准度量空间，利用遗憾界约束动态优化权重分配，实现了跨资产类别（股票、期货、期权等）的自适应风险对冲与策略集成。
 
 ---
 
@@ -41,7 +39,7 @@ $W_{i,t+1} = W_{i,t} \cdot (1 - \eta \cdot L_{i,t})$
 
 ---
 
-## 特性
+## Features
 
 1. 多模态融合: 支持传统量价因子、基本面分数与 GAF 视觉因子的无缝集成。
 2. 高性能并发: 核心引擎采用 C++17 编写，底层通过 Boost.Asio 实现异步 Socket 交易指令分发。
