@@ -62,8 +62,8 @@ $W_{i,t+1} = W_{i,t} \cdot (1 - \eta \cdot L_{i,t})$
 ### 部署流程
 1. 模型导出:
    ```bash
-   python pipeline/train_gaf.py
-   python pipeline/train_ppo.py
+   python train/train_gaf.py
+   python train/train_ppo.py
    ```
 2. 内核构建:
    ```bash
