@@ -83,7 +83,7 @@ $W_{i,t+1} = W_{i,t} \cdot (1 - \eta \cdot L_{i,t})$
 如果您在学术工作或实盘交易系统中参考了 Moses 的架构，请引用本项目：
 
 ```bibtex
-@software{Moses2023,
+@software{Moses2025,
   author = {Moses Contributors},
   title = {Moses: A Multi-modal Online Learning Framework for Signal Ensemble},
   year = {2025},
