@@ -1,4 +1,6 @@
-# <p align="center">Moses</p>
+<p align="center">
+  ![](./assets/moses.png)
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-GPLv3-blue?style=for-the-badge" alt="License">
