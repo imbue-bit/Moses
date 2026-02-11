@@ -18,13 +18,18 @@ Moses 是一个专为高度非平稳金融市场设计的混合智能交易聚�
 
 ### 1. 信号编码与视觉嵌入
 Moses 引入了时序图像化机制。对于任意给定的时间序列 $X = \{x_1, x_2, ..., x_n\}$，系统通过下式构建 GAF 矩阵：
-$$\cos(\phi_i) = \tilde{x}_i, \quad \tilde{x}_i \in [-1, 1]$$
-$$G_{i,j} = \cos(\phi_i + \phi_j) = \tilde{x}_i \tilde{x}_j - \sqrt{1 - \tilde{x}_i^2} \sqrt{1 - \tilde{x}_j^2}$$
+
+$\cos(\phi_i) = \tilde{x}_i, \quad \tilde{x}_i \in [-1, 1]$
+
+$G_{i,j} = \cos(\phi_i + \phi_j) = \tilde{x}_i \tilde{x}_j - \sqrt{1 - \tilde{x}_i^2} \sqrt{1 - \tilde{x}_j^2}$
+
 该矩阵捕捉了价格动量中的非线性相位相关性，并由卷积神经网络转化为高维信号。
 
 ### 2. 在线聚合引擎
 系统将每一路信号视为一个专家。权重的演化遵循指数级更新准则，以最小化预测误差的累积：
-$$W_{i,t+1} = W_{i,t} \cdot (1 - \eta \cdot L_{i,t})$$
+
+$W_{i,t+1} = W_{i,t} \cdot (1 - \eta \cdot L_{i,t})$
+
 其中 $\eta$ 为学习率，$L_{i,t}$ 是基于实际市场回报 $R_{t}$ 定义的损失函数。该算法保证了系统在最坏情况下的性能界。
 
 ### 3. 元策略控制
